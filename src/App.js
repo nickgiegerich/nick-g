@@ -1,26 +1,21 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Typist from 'react-typist';
 import Entrance from './components/Entrance'
 import PageSelector from './components/PageSelector';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import 'react-typist/dist/Typist.css';
 
 class App extends React.Component {
 
   render() { 
     return (
-      <div className="App">
+      <div style={{paddingTop: '25%'}} className="App">
         <Container>
-          <Row>
-            <Col>
+          <Row style={{flex: 1, flexDirection: 'row', justifyContent: 'center'}}>
               <Entrance /> 
-            </Col>
-            <Col>
               <PageSelector />
-            </Col>
           </Row>
         </Container>
       </div>

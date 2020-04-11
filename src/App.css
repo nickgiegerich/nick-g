@@ -17,6 +17,7 @@ a, li, ul {
 }
 
 .entrance-text { 
+  font-size: 65px;
   color: #FF1493;
 }
 
@@ -35,13 +36,15 @@ a, li, ul {
 }
 
 .my-drop-down { 
+  font-size: 35px;
   border-bottom: 1px solid #069BEB !important;
   background-color: transparent;
   border-color: transparent;
-  padding: 1.275rem 5.00rem;
+  padding: 1.275rem 7.00rem;
 }
 
 .my-drop-down:hover { 
+  
   color: black;
   background-color: rgba(255, 20, 145, 0.384);
   border-color: transparent;
@@ -52,6 +55,8 @@ a, li, ul {
 }
 
 .my-dropdown-item { 
+  padding: 10px 100px;
+  font-size: 25px;
   color: #069BEB;
 }
 

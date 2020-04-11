@@ -64,3 +64,12 @@ a, li, ul {
   color: rgb(7, 122, 184);
   background-color: #FF1493;
 }
+
+.my-button {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+.my-button.hide {
+  opacity: 0;
+  pointer-events:none;
+}

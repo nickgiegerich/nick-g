@@ -19,6 +19,7 @@ class PageSelector extends React.Component {
           initialValue: ''
         };
         this.itemSelected = this.itemSelected.bind(this);
+        this.hoverSelectItem = this.hoverSelectItem.bind(this);
       }
 
       toggle() {
@@ -35,19 +36,30 @@ class PageSelector extends React.Component {
         this.setState({dropdownOpen: false});
       }
 
+      hoverSelectItem(page) {
+          
+        if (this.itemSelected) { 
+            this.setState({
+                initialValue: page
+            });
+        } else { 
+            return(false);
+        }
+    }
+
       itemSelected(page) { 
           this.setState({
               initialValue: page,
               itemSelected: true
 
           })
-          console.log('itemSelected:', this.state.itemSelected);
-          console.log('initialValue:', this.state.initialValue);
+          return(true);
       }
 
 
 
   render() { 
+      const button = this.state.itemSelected ? 'my-button btn btn-success' : 'my-button hide'
 
     return (
               <form id="form"> 
@@ -66,13 +78,16 @@ class PageSelector extends React.Component {
                         </div>
                     </DropdownToggle>
                     <DropdownMenu className="my-dropdown-menu">
-                        <DropdownItem onClick={() => this.itemSelected('ABOUT_ME')} className="my-dropdown-item">ABOUT_ME</DropdownItem>
-                        <DropdownItem onClick={() => this.itemSelected('PROJECTS')} className="my-dropdown-item">PROJECTS</DropdownItem>
-                        <DropdownItem onClick={() => this.itemSelected('CONTACT')} className="my-dropdown-item">CONTACT</DropdownItem>
+                        <DropdownItem onMouseOver={() => this.hoverSelectItem('ABOUT_ME')} onClick={() => this.itemSelected('ABOUT_ME')} className="my-dropdown-item">ABOUT_ME</DropdownItem>
+                        <DropdownItem onMouseOver={() => this.hoverSelectItem('PROJECTS')} onClick={() => this.itemSelected('PROJECTS')} className="my-dropdown-item">PROJECTS</DropdownItem>
+                        <DropdownItem onMouseOver={() => this.hoverSelectItem('CONTACT')} onClick={() => this.itemSelected('CONTACT')} className="my-dropdown-item">CONTACT</DropdownItem>
                         <DropdownItem divider />
                     </DropdownMenu>
                 </Dropdown>
-                
+
+                <div>
+                    <button type="submit" className={button}>Execute</button>
+                </div>
               </form>
         
     );

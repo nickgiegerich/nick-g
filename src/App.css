@@ -66,8 +66,16 @@ a, li, ul {
 }
 
 .my-button {
+  color: #FF1493;
+  background-color: transparent;
+  border-color: #069BEB;
   transition: opacity 0.5s;
   opacity: 1;
+}
+
+.my-button:hover { 
+  background-color: #FF1493;
+  border-color: #069BEB;
 }
 .my-button.hide {
   opacity: 0;

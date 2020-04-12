@@ -2,6 +2,11 @@ import React from 'react';
 import '../App.css';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import Typist from 'react-typist';
+import styled, {keyframes} from 'styled-components';
+import { bounce } from 'react-animations';
+import bounceIn from 'react-animations/lib/bounce-in';
+import fadeIn from 'react-animations/lib/fade-in';
+import bounceOut from 'react-animations/lib/bounce-out';
 
 
 
@@ -59,35 +64,37 @@ class PageSelector extends React.Component {
 
 
   render() { 
-      const button = this.state.itemSelected ? 'my-button btn btn-success' : 'my-button hide'
+      const button = this.state.itemSelected ? 'my-button btn btn-success' : 'my-button hide';
+      const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} 1000ms infinite`;
 
     return (
               <form id="form"> 
                 
-                <Dropdown className="d-inline-block" onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                    <DropdownToggle className="my-drop-down">
-                        <div >
-                            {this.state.itemSelected === true ? (
-                                <span>{this.state.initialValue}</span>
-                            ) : (
-                                <Typist>
-                                        <Typist.Delay ms={2000}/>
-                                        [Choose Something]<Typist.Backspace count={18} delay={500}/>[Hover Here]<Typist.Backspace count={11} delay={1000}/>... Waiting]<Typist.Backspace count={8} delay={4000}/>Select one]
-                                </Typist>
-                            )}
-                        </div>
-                    </DropdownToggle>
-                    <DropdownMenu className="my-dropdown-menu">
-                        <DropdownItem onMouseOver={() => this.hoverSelectItem('ABOUT_ME')} onClick={() => this.itemSelected('ABOUT_ME')} className="my-dropdown-item">ABOUT_ME</DropdownItem>
-                        <DropdownItem onMouseOver={() => this.hoverSelectItem('PROJECTS')} onClick={() => this.itemSelected('PROJECTS')} className="my-dropdown-item">PROJECTS</DropdownItem>
-                        <DropdownItem onMouseOver={() => this.hoverSelectItem('CONTACT')} onClick={() => this.itemSelected('CONTACT')} className="my-dropdown-item">CONTACT</DropdownItem>
-                        <DropdownItem divider />
-                    </DropdownMenu>
-                </Dropdown>
+                <div style={{display: 'flex'}}>
+                    <Dropdown className="d-inline-block" onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                        <DropdownToggle className="my-drop-down">
+                            <div >
+                                {this.state.itemSelected === true ? (
+                                    <span>{this.state.initialValue}</span>
+                                ) : (
+                                    <Typist>
+                                            <Typist.Delay ms={2000}/>
+                                            [Hover Here]<Typist.Backspace count={11} delay={1000}/>... Waiting]<Typist.Backspace count={8} delay={4000}/>Select one]
+                                    </Typist>
+                                )}
+                            </div>
+                        </DropdownToggle>
+                        <DropdownMenu className="my-dropdown-menu">
+                            <DropdownItem onMouseOver={() => this.hoverSelectItem('ABOUT_ME')} onClick={() => this.itemSelected('ABOUT_ME')} className="my-dropdown-item">ABOUT_ME</DropdownItem>
+                            <DropdownItem onMouseOver={() => this.hoverSelectItem('PROJECTS')} onClick={() => this.itemSelected('PROJECTS')} className="my-dropdown-item">PROJECTS</DropdownItem>
+                            <DropdownItem onMouseOver={() => this.hoverSelectItem('CONTACT')} onClick={() => this.itemSelected('CONTACT')} className="my-dropdown-item">CONTACT</DropdownItem>
+                            <DropdownItem divider />
+                        </DropdownMenu>
+                    </Dropdown>
 
-                <div>
-                    <button type="submit" className={button}>Execute</button>
+                    <Bounce><button type="submit" className={button}>Execute ></button></Bounce>
                 </div>
+                
               </form>
         
     );

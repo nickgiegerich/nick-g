@@ -17,7 +17,8 @@ a, li, ul {
 }
 
 .entrance-text { 
-  font-size: 65px;
+  /* font-size: 65px; */
+  font-size: calc(24px + (65 - 24) * ((100vw - 300px) / (1600 - 300)));
   color: #FF1493;
 }
 
@@ -37,6 +38,7 @@ a, li, ul {
 
 .my-drop-down { 
   font-size: 35px;
+  font-size: calc(14px + (35 - 14) * ((100vw - 300px) / (1600 - 300)));
   border-bottom: 1px solid #069BEB !important;
   background-color: transparent;
   border-color: transparent;

@@ -64,13 +64,16 @@ class PageSelector extends React.Component {
 
 
   render() { 
-      const button = this.state.itemSelected ? 'my-button btn btn-success' : 'my-button hide';
+      const button = this.state.itemSelected ? 'my-button btn btn-success btn-sm' : 'my-button hide';
       const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} 1000ms infinite`;
 
     return (
-              <form id="form"> 
+              
                 
                 <div style={{display: 'flex'}}>
+                  <Typist>
+                    <h1 className="entrance-text">SELECT <span className="wildcard">*</span> FROM</h1>
+                  </Typist>
                     <Dropdown className="d-inline-block" onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                         <DropdownToggle className="my-drop-down">
                             <div >
@@ -85,7 +88,7 @@ class PageSelector extends React.Component {
                             </div>
                         </DropdownToggle>
                         <DropdownMenu className="my-dropdown-menu">
-                            <DropdownItem onMouseOver={() => this.hoverSelectItem('ABOUT_ME')} onClick={() => this.itemSelected('ABOUT_ME')} className="my-dropdown-item">ABOUT_ME</DropdownItem>
+                            <DropdownItem onMouseOver={() => this.hoverSelectItem('ABOUT')} onClick={() => this.itemSelected('ABOUT')} className="my-dropdown-item">ABOUT</DropdownItem>
                             <DropdownItem onMouseOver={() => this.hoverSelectItem('PROJECTS')} onClick={() => this.itemSelected('PROJECTS')} className="my-dropdown-item">PROJECTS</DropdownItem>
                             <DropdownItem onMouseOver={() => this.hoverSelectItem('CONTACT')} onClick={() => this.itemSelected('CONTACT')} className="my-dropdown-item">CONTACT</DropdownItem>
                             <DropdownItem divider />
@@ -95,7 +98,7 @@ class PageSelector extends React.Component {
                     <Bounce><button type="submit" className={button}>Execute ></button></Bounce>
                 </div>
                 
-              </form>
+              
         
     );
   }

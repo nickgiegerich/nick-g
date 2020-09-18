@@ -3,8 +3,6 @@ import '../../App.css';
 import Execute from './Execute';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import Typist from 'react-typist';
-import styled, {keyframes} from 'styled-components';
-import { bounce } from 'react-animations';
 
 class DropdownSelector extends React.Component {
     constructor() { 
@@ -48,6 +46,7 @@ class DropdownSelector extends React.Component {
       }
 
       // When hovering over dropdown items set the dropdown value to that page name
+      // ** NOT in use currently (here still, for reference)
       hoverSelectItem(pageName) { 
           if (this.itemSelected) {
             this.setState({dropdownValue: pageName});
@@ -82,6 +81,7 @@ class DropdownSelector extends React.Component {
                         <DropdownMenu className="my-dropdown-menu">
                             <DropdownItem onClick={() => this.itemSelected('about')} className="my-dropdown-item">about</DropdownItem>
                             <DropdownItem onClick={() => this.itemSelected('projects')} className="my-dropdown-item">projects</DropdownItem>
+                            <DropdownItem onClick={() => this.itemSelected('experience')} className="my-dropdown-item">experience</DropdownItem>
                             <DropdownItem onClick={() => this.itemSelected('contact')} className="my-dropdown-item">contact</DropdownItem>
                             <DropdownItem divider />
                         </DropdownMenu>
@@ -90,12 +90,7 @@ class DropdownSelector extends React.Component {
                     <div className="d-flex justify-content-center pt-5">
                         <Execute itemSelected={this.state.itemSelected} pageName={this.state.dropdownValue}/>
                     </div>
-                </div>
-          
-            
-           
-         
-            
+                </div>  
         );
       }
 }

@@ -2,12 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
-body { 
+body, html { 
   font-family: Arial, Arial, Helvetica, sans-serif;
   line-height: 1.4;
   background-color: #282c34;
+  height: 100%;
 }
 
 a, li, ul {
@@ -16,11 +18,78 @@ a, li, ul {
   cursor: pointer;
 }
 
+table { 
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #069BEB;
+  color: #FF1493;
+  text-align: center;
+}
+
+td:hover {
+  background-color: #069bebab;
+}
+
+
+.table-header {
+  background-color: black;
+}
+
 .entrance-text { 
   /* font-size: 65px; */
   font-size: calc(24px + (65 - 24) * ((100vw - 300px) / (1600 - 300)));
   color: #FF1493;
 }
+
+.sub-header { 
+  color: #FF1493;
+}
+
+.center-component {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  /* width: 100vw; */
+}
+/*VV FADE TRANSISTION VV*/
+
+.route-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.fade-appear,
+.fade-enter { 
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active { 
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit { 
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active { 
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
+/*^^ end fade dependent CSS ^^*/
+
+
+
+/*V SPINNING WILDCARD V*/
 
 .wildcard { 
   color: #069BEB;
@@ -41,6 +110,8 @@ a, li, ul {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   }
+
+/*^ end wildcard related CSS ^*/
 
 .center-entrance  {
   display: flex;

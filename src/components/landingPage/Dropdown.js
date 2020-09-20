@@ -71,7 +71,7 @@ class DropdownSelector extends React.Component {
                                 {this.state.itemSelected === true ? (
                                     <span>{this.state.dropdownValue}</span>
                                         ) : (
-                                            <Typist>
+                                                <Typist>
                                                 <Typist.Delay ms={2000}/>
                                                     [Hover Here]<Typist.Backspace count={11} delay={1000}/>... Waiting]<Typist.Backspace count={8} delay={4000}/>Select one]
                                                 </Typist>
@@ -82,6 +82,7 @@ class DropdownSelector extends React.Component {
                             <DropdownItem onClick={() => this.itemSelected('about')} className="my-dropdown-item">about</DropdownItem>
                             <DropdownItem onClick={() => this.itemSelected('projects')} className="my-dropdown-item">projects</DropdownItem>
                             <DropdownItem onClick={() => this.itemSelected('experience')} className="my-dropdown-item">experience</DropdownItem>
+                            <DropdownItem onClick={() => this.itemSelected('knowledge')} className="my-dropdown-item">knowledge</DropdownItem>
                             <DropdownItem onClick={() => this.itemSelected('contact')} className="my-dropdown-item">contact</DropdownItem>
                             <DropdownItem divider />
                         </DropdownMenu>

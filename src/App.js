@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Entrance from './components/Entrance'
 import Bio from './components/Bio';
 import Experience from './components/Experience';
+import Knowledge from './components/Knowledge';
 import 'react-typist/dist/Typist.css';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
@@ -14,6 +15,8 @@ class App extends React.Component {
     render() {
       return (
         <Router>
+          <div id="animate-area">
+          </div>
           <div className="container-fluid">
             <Route render={({ location }) => {
   
@@ -29,6 +32,7 @@ class App extends React.Component {
                       <Route exact path="/" component={Entrance}/>
                       <Route path="/about" component={Bio} />
                       <Route path="/experience" component={Experience} />
+                      <Route path="/knowledge" component={Knowledge} />
                     </Switch>
                     </section>
                   </CSSTransition>

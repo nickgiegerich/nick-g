@@ -6,6 +6,7 @@ import Entrance from './components/Entrance'
 import Bio from './components/Bio';
 import Experience from './components/Experience';
 import Knowledge from './components/Knowledge';
+import Languages from './components/Languages';
 import 'react-typist/dist/Typist.css';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
@@ -15,9 +16,7 @@ class App extends React.Component {
     render() {
       return (
         <Router>
-          <div id="animate-area">
-          </div>
-          <div className="container-fluid">
+         
             <Route render={({ location }) => {
   
               return (
@@ -27,19 +26,21 @@ class App extends React.Component {
                     timeout={{ enter: 300, exit: 300 }}
                     classNames="fade"
                   >
-                    <section className="route-section">
+                    
                     <Switch location={location}>
-                      <Route exact path="/" component={Entrance}/>
-                      <Route path="/about" component={Bio} />
-                      <Route path="/experience" component={Experience} />
-                      <Route path="/knowledge" component={Knowledge} />
+                      {/* <section className="route-section"> */}
+                        <Route exact path="/" component={Entrance}/>
+                        <Route path="/about" component={Bio} />
+                        <Route path="/experience" component={Experience} />
+                      {/* </section> */}
+                      <Route path="/knowledge" component={Languages} />
                     </Switch>
-                    </section>
+                    
                   </CSSTransition>
                 </TransitionGroup>
               )
             }}/>
-          </div>
+        
         </Router>
       )
     }

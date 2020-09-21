@@ -6,8 +6,8 @@ export const Title = () => {
     return (
         <div className="row sub-header">
             <div className="col-12">
-                <Typist>
-                    Experience:
+                <Typist className="sub-title">
+                    <span>Experience:</span>
                     
                     {/* <Typist.Delay ms={5000}/>
                     <p>Liking what you seeeee???</p>

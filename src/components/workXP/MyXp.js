@@ -92,7 +92,7 @@ class MyXp extends React.Component {
         return (
             this.jobArray.map((job, i) =>(
                 
-                <div className="col-xs-12 col-sm-12 col-md-4 floating-object" key={job.id}>
+                <div className="col-xs-12 col-sm-12 col-md-4 pb-5 pl-5 pr-5" key={job.id}>
                     <Card key={job.id} className="my-card">
                         <CardHeader
                             action={'From ' + job.from + ' to ' + job.to}

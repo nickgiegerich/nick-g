@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body, html { 
@@ -45,39 +44,166 @@ a, li, ul {
   transition: transform 3s;
 }
 
+/* *********  FLOAIING PROGRAM LANGS  ********* */
 
-.float-container {
+/* nest all */
+.float-container { 
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
-.float-child {
-  float: left;
-}
-
-#animate-area {
-  width: 100%;
-  height: 100vh;
-  margin-left: 15%;
-  background-image: url(/langIcons/java.svg);
-  background-position: 0px 0px;
-  background-repeat: no-repeat;
-  animation: animateBackground 10s linear infinite forwards;
-}
-
-@keyframes animateBackground {
-  from { background-position: 0 100vh;}
-  to {background-position: 0 -100vh;}
-}
-
-
-
+/* nest all */
 .all-objects { 
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
+
+.all-objects div {
+  position: absolute;
+}
+
+/* distances from left */
+.begin {
+  left: 0%
+}
+
+.split-bq {
+  left: 12.5%;
+}
+
+.quarter {
+  left: 25%
+}
+
+.split-qh {
+  left: 37.5%
+}
+
+.half {
+  left: 50%
+}
+
+.split-ht {
+  left: 62.5%;
+}
+
+.three-quarter {
+ left: 75%
+}
+
+.split-te {
+  left: 87.5%
+}
+
+.end {
+ left: 100%
+}
+
+.begin img { 
+  margin-top: 60vh;
+}
+
+.split-bq img{
+  margin-top: 60vh;
+}
+
+.quarter img { 
+  margin-top: 60vh;
+}
+
+.split-qh img{
+  margin-top: 60vh;
+}
+
+.half img {
+  margin-top: 60vh;
+}
+
+.split-ht img{
+  margin-top: 60vh;
+}
+
+.three-quarter img {
+  margin-top: 60vh;
+}
+
+.split-te img{
+  margin-top: 60vh;
+}
+
+.end img {
+  margin-top: 60vh;
+}
+
+/* speeds/direction for the float animation */
+.speed-one {
+  animation: float_lang 50s linear infinite forwards;
+}
+
+.speed-two {
+  animation: float_lang 45s linear infinite forwards;
+}
+
+.speed-three {
+  animation: float_lang 40s linear infinite forwards;
+}
+
+.speed-four {
+  animation: float_lang 35s linear infinite forwards;
+}
+
+.speed-one img {
+  width: 150px;
+  float: right;
+}
+
+.speed-two img {
+  width: 150px;
+  float: right;
+}
+
+.speed-three img {
+  width: 150px;
+  float: right;
+}
+
+.speed-four img {
+  width: 150px;
+  float: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .speed-one img {
+    width: 50px;
+    float: right;
+  }
+  
+  .speed-two img {
+    width: 50px;
+    float: right;
+  }
+  
+  .speed-three img {
+    width: 50px;
+    float: right;
+  }
+  
+  .speed-four img {
+    width: 50px;
+    float: right;
+  }
+}
+
+/* the key frame work horse for animation */
+@keyframes float_lang {
+  0%{transform:translateY(50vh)}
+  to{transform:translateY(-120vh)}
+}
+
+/* ************** END FLOATING ICONS ************** */
 
 .expandOpen { 
   transform: rotate(180deg);
@@ -92,11 +218,8 @@ a, li, ul {
   border-top: 1px solid #069BEB;
 }
 
-.floating-object { 
-    animation: movement_balloons 55s linear infinite forwards;
-    -webkit-animation: movement_balloons 55s linear infinite forwards;
-    -moz-animation: movement_balloons 55s infinite linear forwards;
-    -o-animation: movement_balloons 55s infinite linear forwards;
+.sub-header {
+  font-size: 30px;
 }
 
 .card-detail-hdr { 
@@ -114,6 +237,17 @@ a, li, ul {
   width: 100%;
   top: 0;
   left: 0;
+  overflow: hidden;
+}
+
+.center-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  padding-top: 20%;
 }
 
 .fade-appear,
@@ -148,6 +282,13 @@ a, li, ul {
   display: inline-block;
   font-size: 3rem;
   height: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .wildcard {
+    font-size: 1.6rem;
+    height: 1.1rem;
+  }
 }
 
 @keyframes rotate {

@@ -1,10 +1,16 @@
 import React from 'react';
 import '../App.css';
+import Links from './header/LinkNav';
 
 export const Statement = () => { 
     return (
     
-            <h1 className="entrance-text">YOU ARE BUTTTTT</h1>
+        <div className="container-fluid center-component">
+        <Links/>  
+        <div className="center-wrapper ">
+          {/* TO DO */}
+        </div>
+      </div>
        
     );
 }

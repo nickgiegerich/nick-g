@@ -80,9 +80,9 @@ class DropdownSelector extends React.Component {
                         </DropdownToggle>
                         <DropdownMenu className="my-dropdown-menu">
                             <DropdownItem onClick={() => this.itemSelected('about')} className="my-dropdown-item">about</DropdownItem>
+                            <DropdownItem onClick={() => this.itemSelected('job-experience')} className="my-dropdown-item">job experience</DropdownItem>
                             <DropdownItem onClick={() => this.itemSelected('projects')} className="my-dropdown-item">projects</DropdownItem>
-                            <DropdownItem onClick={() => this.itemSelected('experience')} className="my-dropdown-item">experience</DropdownItem>
-                            <DropdownItem onClick={() => this.itemSelected('knowledge')} className="my-dropdown-item">knowledge</DropdownItem>
+                            <DropdownItem onClick={() => this.itemSelected('client work')} className="my-dropdown-item">client work</DropdownItem>
                             <DropdownItem onClick={() => this.itemSelected('contact')} className="my-dropdown-item">contact</DropdownItem>
                             <DropdownItem divider />
                         </DropdownMenu>

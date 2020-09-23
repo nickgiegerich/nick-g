@@ -5,7 +5,7 @@
 }
 
 body, html { 
-  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-family: 'Audiowide', cursive;
   line-height: 1.4;
   background-color: #282c34;
   height: 100%;
@@ -19,13 +19,14 @@ a, li, ul {
 }
 
 .entrance-text { 
+  font-family: 'Audiowide', cursive;
   /* font-size: 65px; */
   font-size: calc(24px + (65 - 24) * ((100vw - 300px) / (1600 - 300)));
-  color: #FF1493;
+  color: #ff48c4;
 }
 
 .sub-header { 
-  color: #ff1491d0;
+  color: white;
   width: 100%;
 }
 
@@ -50,7 +51,7 @@ a, li, ul {
 .float-container { 
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -210,12 +211,13 @@ a, li, ul {
 }
 
 .my-card { 
+  font-family: 'Audiowide', cursive !important;
   background-color: #333436 !important;
-  color: #FF1493 !important;
+  color: #ff48c4 !important;
 }
 
 .my-hr { 
-  border-top: 1px solid #069BEB;
+  border-top: 1px solid #2bd1fc;
 }
 
 .sub-header {
@@ -223,11 +225,12 @@ a, li, ul {
 }
 
 .card-detail-hdr { 
-  color: #069BEB;
+  font-family: 'Audiowide', cursive !important;
+  color: #2bd1fc;
 }
 
 .expand-icon { 
-  color: #069BEB !important;
+  color: #2bd1fc !important;
 }
 /*VV FADE TRANSISTION VV*/
 
@@ -244,10 +247,11 @@ a, li, ul {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 0;
+  /* padding-top: 20%; */
+  top: 20%;
   left: 0;
   overflow: scroll;
-  padding-top: 20%;
+  /* padding-top: 20%; */
 }
 
 .fade-appear,
@@ -278,7 +282,7 @@ a, li, ul {
 /*V SPINNING WILDCARD V*/
 
 .wildcard { 
-  color: #069BEB;
+  color: #2bd1fc;
   display: inline-block;
   font-size: 3rem;
   height: 2.5rem;
@@ -317,9 +321,10 @@ a, li, ul {
 }
 
 .my-drop-down { 
+  font-family: 'Audiowide', cursive;
   font-size: 35px;
   font-size: calc(14px + (35 - 14) * ((100vw - 300px) / (1600 - 300)));
-  border-bottom: 1px solid #069BEB !important;
+  border-bottom: 1px solid #2bd1fc !important;
   background-color: transparent;
   border-color: transparent;
   padding: 1.275rem 7.00rem;
@@ -327,41 +332,90 @@ a, li, ul {
 
 .my-drop-down:hover { 
   
-  color: black;
-  background-color: rgba(255, 20, 145, 0.384);
+  color: #ff48c4;
+  background-color: #c04df991;
   border-color: transparent;
 }
 
 .my-dropdown-menu { 
-  background-color: rgba(255, 20, 145, 0.384);
+  background-color: #c04df991;
 }
 
 .my-dropdown-item { 
+  font-family: 'Audiowide', cursive;
   padding: 10px 100px;
   font-size: 25px;
-  color: #069BEB;
+  color: #2bd1fc;
 }
 
 .my-dropdown-item:hover { 
   color: rgb(7, 122, 184);
-  background-color: #FF1493;
+  background-color: #ff48c4;
 }
 
 .my-button {
-  color: #FF1493;
+  color: #ff48c4;
   background-color: transparent;
   border: solid;
   border-radius: 25px;
-  border-color: #069BEB;
+  border-color: #2bd1fc;
   transition: opacity 0.5s;
   opacity: 1;
 }
 
 .my-button:hover { 
-  background-color: #FF1493;
-  border-color: #069BEB;
+  background-color: #ff48c4;
+  border-color: #2bd1fc;
 }
 .my-button.hide {
   opacity: 0;
   pointer-events:none;
+}
+
+.my-menu-button { 
+  color: #ff48c4;
+  background-color: transparent;
+  border: solid;
+  border-radius: 10px;
+  border-color: #2bd1fc;
+}
+
+.my-menu-item { 
+  font-family: 'Audiowide', cursive;
+  color: #c04df9 !important;
+  text-decoration: underline;
+  text-decoration-color: #2bd1fc !important;
+  text-decoration: none !important;
+}
+
+.my-menu-item:hover {
+  background-color: #f3ea5f;
+  text-decoration: underline !important;
+  text-decoration-color: #2bd1fc !important;
+}
+
+.main-footer { 
+  color: #ff48c4;
+  background-color: transparent;
+  padding-top: .5em;
+  position: absolute;
+  bottom: -30vh;
+  width: 100%;
+  text-align: center;
+  margin-top: -45px;
+}
+
+.footer-heart { 
+  color: #c04df9;
+}
+
+.page-container { 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap { 
+  text-align: center;
+  flex: 1;
 }

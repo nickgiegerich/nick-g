@@ -7,6 +7,7 @@ import Bio from './components/Bio';
 import Experience from './components/Experience';
 import Knowledge from './components/Knowledge';
 import Languages from './components/Languages';
+import Footer from './components/footer/Footer'
 import 'react-typist/dist/Typist.css';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
@@ -15,8 +16,9 @@ class App extends React.Component {
 
     render() {
       return (
+        <div className="page-container">
+          <div className="content-wrap">
         <Router>
-         
             <Route render={({ location }) => {
   
               return (
@@ -31,7 +33,7 @@ class App extends React.Component {
                       {/* <section className="route-section"> */}
                         <Route exact path="/" component={Entrance}/>
                         <Route path="/about" component={Bio} />
-                        <Route path="/experience" component={Experience} />
+                        <Route path="/job-experience" component={Experience} />
                       {/* </section> */}
                       <Route path="/knowledge" component={Languages} />
                     </Switch>
@@ -40,8 +42,10 @@ class App extends React.Component {
                 </TransitionGroup>
               )
             }}/>
-        
         </Router>
+        </div>
+        <Footer/>
+        </div>
       )
     }
   }

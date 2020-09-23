@@ -28,7 +28,7 @@ class MyXp extends React.Component {
             + 'to extract data from the PeopleSoft database into usable reports. Your job duties often require you to work with the Business Intelligence (BI) and Integration ' 
             + 'Broker components of the software. The qualifications for beginning this career include a background in SQL and some prior coding experience. '
             , duties: 'Duties'
-            , from: 'Jan 01, 2020'
+            , from: '01/20'
             , to: 'Current'
             , image: './#'},
         {id: 2
@@ -38,8 +38,8 @@ class MyXp extends React.Component {
             + 'experience and function, a certain level of both graphic design and computer '
             + 'programming is necessary. ' 
             , duties: 'Duties'
-            , from: 'July 01, 2017'
-            , to: 'Aug 01, 2018'
+            , from: '09/17'
+            , to: '08/18'
             , image: './#'},
         {id: 3
             , title: 'Software Developer'
@@ -48,8 +48,8 @@ class MyXp extends React.Component {
             + 'experience and function, a certain level of both graphic design and computer '
             + 'programming is necessary. ' 
             , duties: 'Duties'
-            , from: 'July 01, 2017'
-            , to: 'Aug 01, 2018'
+            , from: '07/17'
+            , to: '08/18'
             , image: './#'},
       ];
 
@@ -95,13 +95,14 @@ class MyXp extends React.Component {
                 <div className="col-xs-12 col-sm-12 col-md-4 pb-5 pl-5 pr-5" key={job.id}>
                     <Card key={job.id} className="my-card">
                         <CardHeader
-                            action={'From ' + job.from + ' to ' + job.to}
+                            style={{fontFamily: 'font-family: `Audiowide`, cursive !important'}}
+                            action={job.from + ' - ' + job.to}
                             title={job.title}
                         />
-                        <CardMedia
+                        {/* <CardMedia
                             // image={job.image} // NOT WORKING
                             // style={{heigh: 0, paddingTop: '56.25%'}}
-                        />
+                        /> */}
                          {/* <CardContent>
                             <Typography variant="body2" component="p">
                                 {job.descr}
@@ -119,28 +120,13 @@ class MyXp extends React.Component {
                         </CardActions>
                         <Collapse in={this.state.expanded === i} timeout="auto" unmountOnExit>
                         <CardContent>
-                            <Typography className="card-detail-hdr" paragraph>Method:</Typography>
+                            <Typography className="card-detail-hdr" paragraph>Details:</Typography>
                             <Typography paragraph>
-                                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-                                minutes.
+                                {job.descr}
                             </Typography>
+                            <Typography className="card-detail-hdr" paragraph>Duties:</Typography>
                             <Typography paragraph>
-                                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-                                heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-                                browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-                                and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-                                pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-                                saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                            </Typography>
-                            <Typography paragraph>
-                                Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-                                without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-                                medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-                                again without stirring, until mussels have opened and rice is just tender, 5 to 7
-                                minutes more. (Discard any mussels that don’t open.)
-                            </Typography>
-                            <Typography>
-                                Set aside off of the heat to let rest for 10 minutes, and then serve.
+                                {job.duties}
                             </Typography>
                             </CardContent>
                         </Collapse>

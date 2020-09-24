@@ -5,8 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Entrance from './components/Entrance'
 import Bio from './components/Bio';
 import Experience from './components/Experience';
-import Knowledge from './components/Knowledge';
-import Languages from './components/Languages';
+import Skills from './components/Skills';
 import Footer from './components/footer/Footer'
 import 'react-typist/dist/Typist.css';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
@@ -30,12 +29,10 @@ class App extends React.Component {
                   >
                     
                     <Switch location={location}>
-                      {/* <section className="route-section"> */}
                         <Route exact path="/" component={Entrance}/>
                         <Route path="/about" component={Bio} />
                         <Route path="/job-experience" component={Experience} />
-                      {/* </section> */}
-                      <Route path="/knowledge" component={Languages} />
+                        <Route path="/expertise" component={Skills} />
                     </Switch>
                     
                   </CSSTransition>

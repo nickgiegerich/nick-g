@@ -17,19 +17,24 @@ export default function Links() {
 
   return (
     <Typography className={classes.root}>
-        <div className="row d-flex align-self-center text-center" style={{width: '100vw'}}>
-            <div className="col-6 d-flex flex-column pr-5"> 
-                <Link className="my-menu-item" component={NavLinkMui} to='/'>
-                    home
-                </Link>
+        <div className="row d-flex align-self-center text-center" style={{width: '100vw', fontSize: '18px'}}>
+            <div className="col-4 d-flex flex-column pr-5"> 
                 <Link className="my-menu-item" component={NavLinkMui} to='/about'>
                     about
+                </Link>
+                <Link className="my-menu-item" component={NavLinkMui} to='/expertise'>
+                    expertise
                 </Link>
                 <Link className="my-menu-item" component={NavLinkMui} to='/job-experience'>
                     job experience
                 </Link>
             </div>
-            <div className="col-6 d-flex flex-column pl-5"> 
+            <div className="col-4 d-flex flex-column pr-5"> 
+                <Link className="my-menu-item" component={NavLinkMui} to='/'>
+                    home
+                </Link>
+            </div>
+            <div className="col-4 d-flex flex-column pl-5"> 
                 <Link className="my-menu-item" component={NavLinkMui} to='/projects'>
                     projects
                 </Link>

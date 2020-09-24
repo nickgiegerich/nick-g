@@ -1,18 +1,17 @@
 import React from 'react';
 import '../App.css';
-import MyXp from './workXP/MyXp';
-import Title from './workXP/Title';
-import SimpleMenu from './header/SimpleMenu';
+import Languages from './skills/Languages';
 import Links from './header/LinkNav';
+import Title from './skills/Title';
 
-class Experience extends React.Component {
+class Skills extends React.Component {
   render() { 
   return (
-        <div className="container-fluid center-component">
+        <div className="container-fluid">
             <Links/>  
+            <Languages/>
           <div style={{paddingTop: '13%', width: '100%'}}>
             <Title/>
-            <MyXp/>
           </div>
         </div>
   
@@ -20,4 +19,4 @@ class Experience extends React.Component {
   }
 }
 
-export default Experience;
+export default Skills;

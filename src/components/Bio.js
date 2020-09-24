@@ -7,7 +7,7 @@ export const Statement = () => {
     
         <div className="container-fluid center-component">
         <Links/>  
-        <div className="center-wrapper ">
+        <div className="">
           {/* TO DO */}
         </div>
       </div>

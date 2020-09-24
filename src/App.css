@@ -76,7 +76,7 @@ a, li, ul {
 }
 
 .quarter {
-  left: 25%
+  left: 20%
 }
 
 .split-qh {
@@ -84,7 +84,7 @@ a, li, ul {
 }
 
 .half {
-  left: 50%
+  left: 40%
 }
 
 .split-ht {
@@ -92,7 +92,7 @@ a, li, ul {
 }
 
 .three-quarter {
- left: 75%
+ left: 60%
 }
 
 .split-te {
@@ -100,10 +100,10 @@ a, li, ul {
 }
 
 .end {
- left: 100%
+ left: 80%
 }
 
-.begin img { 
+.begin img{ 
   margin-top: 60vh;
 }
 
@@ -141,19 +141,19 @@ a, li, ul {
 
 /* speeds/direction for the float animation */
 .speed-one {
-  animation: float_lang 50s linear infinite forwards;
+  animation: float_lang3 38s linear infinite forwards;
 }
 
 .speed-two {
-  animation: float_lang 45s linear infinite forwards;
+  animation: float_lang 38s linear infinite forwards;
 }
 
 .speed-three {
-  animation: float_lang 40s linear infinite forwards;
+  animation: float_lang2 38s linear infinite forwards;
 }
 
 .speed-four {
-  animation: float_lang 35s linear infinite forwards;
+  animation: float_lang 38s linear infinite forwards;
 }
 
 .speed-one img {
@@ -204,6 +204,18 @@ a, li, ul {
   to{transform:translateY(-120vh)}
 }
 
+/* FOR FRONT-END */
+@keyframes float_lang2 {
+  0%{transform:translateY(-180vh)}
+  to{transform:translateY(50vh)}
+}
+
+/* FOR FRAMEWORKS */
+@keyframes float_lang3 {
+  0%{transform:translateY(-93vh)}
+  to{transform:translateY(50vh)}
+}
+
 /* ************** END FLOATING ICONS ************** */
 
 .expandOpen { 
@@ -245,7 +257,7 @@ a, li, ul {
 
 .center-wrapper {
   position: absolute;
-  height: 100%;
+  height: 65vh;
   width: 100%;
   /* padding-top: 20%; */
   top: 20%;
@@ -399,8 +411,9 @@ a, li, ul {
   background-color: transparent;
   padding-top: .5em;
   position: absolute;
-  bottom: -30vh;
+  bottom: 0;
   width: 100%;
+  height: 2.5rem;
   text-align: center;
   margin-top: -45px;
 }
@@ -410,12 +423,10 @@ a, li, ul {
 }
 
 .page-container { 
-  display: flex;
-  flex-direction: column;
+  position: relative;
   min-height: 100vh;
 }
 
 .content-wrap { 
-  text-align: center;
-  flex: 1;
+  padding-bottom: 2.5rem;
 }

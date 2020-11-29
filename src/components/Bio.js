@@ -5,7 +5,7 @@ import Links from './header/LinkNav';
 export const Statement = () => { 
     return (
     
-        <div className="container-fluid center-component">
+        <div className="container-fluid">
         <Links/>  
         <div className="">
           {/* TO DO */}

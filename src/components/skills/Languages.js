@@ -6,47 +6,47 @@ class Languages extends React.Component {
   return (
         <div className="float-container">
             <div className="all-objects">
-                <div className="speed-four begin">
-                    <span style={{marginTop: '50vh' ,position: 'absolute', color: 'white'}}>back-end</span>
+                <div className="speed-one dist-1">
                     <img src='./langIcons/java.svg'/>
                 </div>
-                <div className="speed-four begin">
-                    <img style={{marginTop: '80vh'}} src='./langIcons/python.svg'/>
+                <div className="speed-two dist-2">
+                    <img src='./langIcons/python.svg'/>
                 </div>
-                <div className="speed-four begin">
-                    <img style={{marginTop: '100vh'}} src='./langIcons/php.svg'/>
+                <div className="speed-two dist-11">
+                    <img src='./langIcons/php.svg'/>
                 </div>
-                <div className="speed-three quarter">
-                    {/* <span style={{marginTop: '50vh' ,position: 'absolute', color: 'white'}}>front-end</span> */}
+                <div className="speed-four dist-4">
                     <img src='./langIcons/js.svg'/>
                 </div>
-                <div className="speed-three quarter">
-                    <img style={{marginTop: '80vh'}} src='./langIcons/react.svg'/>
+                <div className="speed-one dist-5">
+                    <img src='./langIcons/react.svg'/>
                 </div>
-                <div className="speed-three quarter">
-                    <img style={{marginTop: '100vh'}} src='./langIcons/jquery.svg'/>
+                <div className="speed-three dist-6">
+                    <img src='./langIcons/jquery.svg'/>
                 </div>
-                <div className="speed-three quarter">
-                    <img style={{marginTop: '120vh'}} src='./langIcons/html.svg'/>
+                <div className="speed-four dist-7">
+                    <img src='./langIcons/html.svg'/>
                 </div>
-                <div className="speed-three quarter">
-                    <img style={{marginTop: '140vh'}} src='./langIcons/css.svg'/>
-                    <span style={{marginTop: '160vh' ,position: 'absolute', color: 'white'}}>front-end</span>
+                <div className="speed-two dist-8">
+                    <img src='./langIcons/css.svg'/>
                 </div>
-                <div className="speed-two half">
-                    <span style={{marginTop: '50vh' ,position: 'absolute', color: 'white'}}>database engines</span>
+                <div className="speed-one dist-9">
                     <img src='./langIcons/oracle.svg'/>
                 </div>
-                <div className="speed-two half">
-                    <img style={{marginTop: '80vh'}} src='./langIcons/oracle.svg'/>
+                <div className="speed-three dist-10">
+                <img src='./langIcons/django.svg'/>
                 </div>
-                <div className="speed-one three-quarter">
+                <div className="speed-one dist-12">
                     <img src='./langIcons/laravel.svg'/>
-                    <span style={{marginTop: '80vh' ,position: 'absolute', color: 'white'}}>frameworks</span>
                 </div>
-                <div className="speed-four end">
-                    <span style={{marginTop: '50vh' ,position: 'absolute', color: 'white'}}>version control</span>
+                <div className="speed-four dist-14">
                     <img src='./langIcons/git.svg'/>
+                </div>
+                <div className="speed-one dist-7">
+                    <img src='./langIcons/postgresql.svg'/>
+                </div>
+                <div className="speed-two dist-14">
+                    <img src='./langIcons/matlab.svg'/>
                 </div>
             </div>
         </div>

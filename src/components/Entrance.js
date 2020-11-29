@@ -7,18 +7,15 @@ class Entrance extends React.Component {
 
   render() { 
   return (
-          <div className="container center-component">
-            <div className="center-wrapper">
                   <div className="row">
-                    <div className="col-12 d-flex justify-content-center">
+                    <div className="col-12">
                       <Statement/>
                     </div>
-                    <div className="col-12 d-flex justify-content-center">
+                    <div className="col-12">
                       <DropdownSelector/>
                     </div>
+                  
                   </div>
-              </div>
-          </div>
    
     );
   }

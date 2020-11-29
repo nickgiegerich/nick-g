@@ -2,17 +2,15 @@ import React from 'react';
 import '../App.css';
 import Languages from './skills/Languages';
 import Links from './header/LinkNav';
-import Title from './skills/Title';
+import Title from './skills/SkillsTitle';
 
 class Skills extends React.Component {
   render() { 
   return (
-        <div className="container-fluid">
-            <Links/>  
+        <div id='skills' className="row">
+          <div className="col-12">
             <Languages/>
-          <div style={{paddingTop: '13%', width: '100%'}}>
-            <Title/>
-          </div>
+          </div> 
         </div>
   
     );

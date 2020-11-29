@@ -1,8 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Entrance from './components/Entrance'
+import LinkNav from './components/header/LinkNav';
+import Entrance from './components/Entrance';
+import AboutTitle from './components/about/AboutTitle'
+import About from './components/about/About'
+import Title from './components/skills/SkillsTitle';
+import ProjTitle from './components/projects/ProjectsTitle';
 import Bio from './components/Bio';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
@@ -15,33 +21,55 @@ class App extends React.Component {
 
     render() {
       return (
-        <div className="page-container">
-          <div className="content-wrap">
-        <Router>
-            <Route render={({ location }) => {
-  
-              return (
-                <TransitionGroup component={null}>
-                  <CSSTransition
-                    key={location.key}
-                    timeout={{ enter: 300, exit: 300 }}
-                    classNames="fade"
-                  >
-                    
-                    <Switch location={location}>
-                        <Route exact path="/" component={Entrance}/>
-                        <Route path="/about" component={Bio} />
-                        <Route path="/job-experience" component={Experience} />
-                        <Route path="/expertise" component={Skills} />
-                    </Switch>
-                    
-                  </CSSTransition>
-                </TransitionGroup>
-              )
-            }}/>
-        </Router>
+        <div className="container-fluid">
+        <div>
+            <LinkNav/>
         </div>
-        <Footer/>
+        <div>
+          {/* HERO HEADER | GREETING  */}
+          <div className='hero-section-centered'>
+            <div>
+              <Entrance/>
+            </div>
+          </div>
+
+          {/* ABOUT */}
+          <div id='about'>
+            <div className='title-centered'>
+              <AboutTitle/>
+            </div>
+
+            <div className='d-flex justify-content-center'>
+              <About/>
+            </div>
+          </div>
+
+          {/* PROJECTS - TODO */}
+          <div id='projects'>
+            <div className='title-centered'>
+              <ProjTitle/>
+            </div>
+
+            <div >
+
+            </div>
+          </div>
+
+          {/* SKILLS */}
+          <div id='skills' className='' style={{height: "100vh"}}>
+            <div className='title-centered'>
+              <Title/>
+            </div>
+            <div>
+              <Skills/>
+            </div>
+          </div>
+
+          {/* RESUME - TODO */}
+        </div>
+        <footer>
+          <Footer/>
+        </footer>
         </div>
       )
     }

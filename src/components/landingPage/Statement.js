@@ -5,7 +5,7 @@ import '../../App.css';
 export const Statement = () => { 
     return (
         <Typist>
-            <h1 className="entrance-text">SELECT <span className="wildcard">*</span> FROM</h1>
+            <h1 className="entrance-text">Nicholas Giegerich</h1>
         </Typist>
     );
 }

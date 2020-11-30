@@ -16,7 +16,7 @@ class Projects extends React.Component {
                 <Card.Body>
                 <Card.Title>Forever Wild Media</Card.Title>
                 <Card.Text>
-                    I built this site using Worpress as a starting point and added
+                    I built this site using Wordpress as a starting point and added
                     custom front-end components where they were needed. We needed
                     a clean functional website quickly as well as fully functioning 
                     e-store.
@@ -49,9 +49,9 @@ class Projects extends React.Component {
             </ListGroup>
             </Card>
         </div>
-        <div className='col-lg-4 col-12'>
+        <div className='col-lg-4 col-12 pb-5'>
             <Card className='projects-card projects-card-shadow'>
-                <Card.Img variant='top' src='./project-imgs/snow.jpg'/>
+                <Card.Img  variant='top' src='./project-imgs/snow.png'/>
                 <Card.Body>
                 <Card.Title>Live Powder App</Card.Title>
                 <Card.Text>

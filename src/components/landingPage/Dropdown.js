@@ -62,24 +62,24 @@ class DropdownSelector extends React.Component {
       render() { 
         return(
             <div>
-                    <div className="btn-group dropright d-inline-block">
+                    <div className="btn-group dropdown d-inline-block">
                         <button type="button" className="my-drop-down" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div>
                                 {this.state.itemSelected === true ? (
                                     <span>{this.state.dropdownValue}</span>
                                         ) : (
                                                 <Typist className='dropdown-text-prompt'>
-                                                <Typist.Delay ms={2000}/>
-                                                    [click me to find out more]<Typist.Backspace count={17} delay={5000}/>... or scroll down]
+                                                <Typist.Delay ms={4500}/>
+                                                    [click here to find out more]<Typist.Backspace count={18} delay={5000}/>... or scroll down]
                                                 </Typist>
                                 )}
                             </div>
                         </button>
                         <div id="dropdown" className="my-dropdown-menu dropdown-menu">
-                            <AnchorLink href="/about" className="my-dropdown-item dropdown-item">about</AnchorLink>
-                            <AnchorLink href="/projects" className="my-dropdown-item dropdown-item">projects</AnchorLink>
-                            <AnchorLink href="/skills" className="my-dropdown-item dropdown-item">skills</AnchorLink>
-                            <AnchorLink href="/resume" className="my-dropdown-item dropdown-item">resumé</AnchorLink>
+                            <AnchorLink offset='100' href="/about" className="my-dropdown-item dropdown-item">about</AnchorLink>
+                            <AnchorLink offset='100' href="/projects" className="my-dropdown-item dropdown-item">projects</AnchorLink>
+                            <AnchorLink offset='100' href="/skills" className="my-dropdown-item dropdown-item">skills</AnchorLink>
+                            <AnchorLink offset='100' href="/resume" className="my-dropdown-item dropdown-item">resumé</AnchorLink>
                         </div>
                     </div>
                 </div>  

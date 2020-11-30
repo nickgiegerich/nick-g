@@ -21,10 +21,9 @@ class App extends React.Component {
     render() {
       return (
         <div id='home' className="container-fluid">
-          <div>
-              <LinkNav/>
-          </div>
-        <div>
+          {/* NAV BAR */}
+          <LinkNav/>
+          
           {/* HERO HEADER | GREETING  */}
           <div className='hero-section-centered'>
             <div>
@@ -33,15 +32,14 @@ class App extends React.Component {
           </div>
 
           {/* ABOUT */}
-          <div id='about'>
-            <div className='title-centered'>
+         
+            <div id='about' className='title-centered'>
               <AboutTitle/>
             </div>
 
             <div className='d-flex justify-content-center'>
               <About/>
             </div>
-          </div>
 
           {/* PROJECTS */}
           <div id='projects' className='pt-5 pb-5'>
@@ -76,7 +74,6 @@ class App extends React.Component {
           </div>
 
         {/* FOOTER */}
-        </div>
           <footer>
             <Footer/>
           </footer>

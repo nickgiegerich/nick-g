@@ -18,7 +18,7 @@ body, html {
 
 #root { 
   border: 3px solid #c04df9;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   overflow-y: scroll;
 }
 

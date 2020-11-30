@@ -1,5 +1,4 @@
 import React from 'react';
-import Typist from 'react-typist';
 import '../../App.css';
 
 export const Title = () => { 

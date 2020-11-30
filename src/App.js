@@ -2,29 +2,28 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LinkNav from './components/header/LinkNav';
 import Entrance from './components/Entrance';
 import AboutTitle from './components/about/AboutTitle'
 import About from './components/about/About'
 import Title from './components/skills/SkillsTitle';
 import ProjTitle from './components/projects/ProjectsTitle';
-import Bio from './components/Bio';
-import Experience from './components/Experience';
+import Projects from './components/projects/Projects';
+import ResumeTitle from './components/resume/ResumeTitle';
+import Resume from './components/resume/Resume';
 import Skills from './components/Skills';
 import Footer from './components/footer/Footer'
 import 'react-typist/dist/Typist.css';
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 
 class App extends React.Component {
 
     render() {
       return (
-        <div className="container-fluid">
-        <div>
-            <LinkNav/>
-        </div>
+        <div id='home' className="container-fluid">
+          <div>
+              <LinkNav/>
+          </div>
         <div>
           {/* HERO HEADER | GREETING  */}
           <div className='hero-section-centered'>
@@ -44,19 +43,19 @@ class App extends React.Component {
             </div>
           </div>
 
-          {/* PROJECTS - TODO */}
-          <div id='projects'>
+          {/* PROJECTS */}
+          <div id='projects' className='pt-5 pb-5'>
             <div className='title-centered'>
               <ProjTitle/>
             </div>
 
-            <div >
-
+            <div>
+              <Projects/>
             </div>
           </div>
 
           {/* SKILLS */}
-          <div id='skills' className='' style={{height: "100vh"}}>
+          <div id='skills' className='pt-5 pb-5 mb-5' style={{height: '70vh'}}>
             <div className='title-centered'>
               <Title/>
             </div>
@@ -65,11 +64,22 @@ class App extends React.Component {
             </div>
           </div>
 
-          {/* RESUME - TODO */}
+          {/* RESUME */}
+          <div id='resume' style={{paddingTop:'35px', paddingBottom:'65px'}}>
+            <div className='title-centered'>
+              <ResumeTitle/>
+            </div>
+
+            <div>
+              <Resume/>
+            </div>
+          </div>
+
+        {/* FOOTER */}
         </div>
-        <footer>
-          <Footer/>
-        </footer>
+          <footer>
+            <Footer/>
+          </footer>
         </div>
       )
     }

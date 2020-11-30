@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../App.css';
 
-export const AboutTitle = () => { 
+export const ResumeTitle = () => { 
     return (
         <div className="row sub-header">
             <div className="col-12">
-            <span className='section-title'>about me</span>
+            <span className='section-title'>resumé</span>
                 <hr className="my-hr"/>
             </div>
         </div>
@@ -13,4 +13,4 @@ export const AboutTitle = () => {
     );
 }
 
-export default AboutTitle;
+export default ResumeTitle;

@@ -1,7 +1,5 @@
 import React from 'react';
 import '../../App.css';
-import Execute from './Execute';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Typist from 'react-typist';
 
@@ -70,9 +68,9 @@ class DropdownSelector extends React.Component {
                                 {this.state.itemSelected === true ? (
                                     <span>{this.state.dropdownValue}</span>
                                         ) : (
-                                                <Typist>
+                                                <Typist className='dropdown-text-prompt'>
                                                 <Typist.Delay ms={2000}/>
-                                                    [click me]<Typist.Backspace count={9} delay={5000}/>... waiting]
+                                                    [click me to find out more]<Typist.Backspace count={17} delay={5000}/>... or scroll down]
                                                 </Typist>
                                 )}
                             </div>
@@ -81,7 +79,7 @@ class DropdownSelector extends React.Component {
                             <AnchorLink href="/about" className="my-dropdown-item dropdown-item">about</AnchorLink>
                             <AnchorLink href="/projects" className="my-dropdown-item dropdown-item">projects</AnchorLink>
                             <AnchorLink href="/skills" className="my-dropdown-item dropdown-item">skills</AnchorLink>
-                            <AnchorLink href="#" className="my-dropdown-item dropdown-item">resumé</AnchorLink>
+                            <AnchorLink href="/resume" className="my-dropdown-item dropdown-item">resumé</AnchorLink>
                         </div>
                     </div>
                 </div>  

@@ -7,7 +7,9 @@ export default function Links() {
   return (
 <nav className="navbar navbar-dark fixed-top">
 <div className="container-fluid">
-    <AnchorLink className="navbar-brand" href="/home">N. Giegerich</AnchorLink>
+  <div>
+    
+  </div>
     <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
     </button>
@@ -18,7 +20,7 @@ export default function Links() {
             <AnchorLink offset='100' className="nav-item nav-link my-nav-item" href="/about">about</AnchorLink>
             <AnchorLink offset='100' className="nav-item nav-link my-nav-item" href="/projects">projects</AnchorLink>
             <AnchorLink className="nav-item nav-link my-nav-item" href="/skills">skills</AnchorLink>
-            <AnchorLink className="nav-item nav-link my-nav-item" href="/resume">resumé</AnchorLink>
+            <AnchorLink className="nav-item nav-link my-nav-item" href="/contact">contact</AnchorLink>
         </div>
     </div>
 </div>

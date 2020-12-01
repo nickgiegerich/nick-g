@@ -4,10 +4,11 @@ import '../../App.css';
 
 export const Statement = () => { 
     return (
+        <div>
         <Typist>
-            <h1 className="entrance-text">welcome to my website!</h1>
-            <h2 className="entrance-text">my name is <span className='highlight-text'>Nick</span> and I love to code.</h2>
+            <h1 className="entrance-text pt-5 pb-5" style={{fontSize: '2.1rem'}}> &lt;<span className='highlight-text'>NickGiegerich</span>/&gt; </h1>
         </Typist>
+        </div>
     );
 }
 

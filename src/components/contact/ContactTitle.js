@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../App.css';
 
-export const ResumeTitle = () => { 
+export const ContactTitle = () => { 
     return (
         <div className="row sub-header">
             <div className="col-12">
-            <span className='section-title'>resumé</span>
+            <span className='section-title'>contact</span>
                 <hr className="my-hr"/>
             </div>
         </div>
@@ -13,4 +13,4 @@ export const ResumeTitle = () => {
     );
 }
 
-export default ResumeTitle;
+export default ContactTitle;

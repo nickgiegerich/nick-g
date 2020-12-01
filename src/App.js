@@ -5,12 +5,13 @@ import './App.css';
 import LinkNav from './components/header/LinkNav';
 import Entrance from './components/Entrance';
 import AboutTitle from './components/about/AboutTitle'
+import Statement from './components/landingPage/Statement'
 import About from './components/about/About'
 import Title from './components/skills/SkillsTitle';
 import ProjTitle from './components/projects/ProjectsTitle';
 import Projects from './components/projects/Projects';
-import ResumeTitle from './components/resume/ResumeTitle';
-import Resume from './components/resume/Resume';
+import ContactTitle from './components/contact/ContactTitle';
+import Contact from './components/contact/Contact';
 import Skills from './components/Skills';
 import Footer from './components/footer/Footer'
 import 'react-typist/dist/Typist.css';
@@ -25,10 +26,14 @@ class App extends React.Component {
           <LinkNav/>
           
           {/* HERO HEADER | GREETING  */}
-          <div className='hero-section-centered'>
+          {/* <div className='hero-section-centered'>
             <div>
               <Entrance/>
             </div>
+          </div> */}
+
+          <div className='pt-5 title-centered'>
+            <Statement/>          
           </div>
 
           {/* ABOUT */}
@@ -63,13 +68,13 @@ class App extends React.Component {
           </div>
 
           {/* RESUME */}
-          <div id='resume' style={{paddingTop:'35px', paddingBottom:'65px'}}>
+          <div id='contact' style={{paddingTop:'35px', paddingBottom:'65px'}}>
             <div className='title-centered'>
-              <ResumeTitle/>
+              <ContactTitle/>
             </div>
 
             <div>
-              <Resume/>
+              <Contact/>
             </div>
           </div>
 

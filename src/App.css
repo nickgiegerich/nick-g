@@ -48,7 +48,7 @@ a.my-nav-item:hover {
 .entrance-text { 
   font-family: 'Audiowide', cursive;
   /* font-size: 65px; */
-  font-size: calc(24px + (65 - 24) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (1600 - 300)));
   color: #ff48c4;
 }
 
@@ -111,9 +111,26 @@ span.section-title:hover:before {
   color: #ff48c4;
 }
 
+.electric-pink {
+  color: #ff48c4;
+}
+
+.electric-yellow { 
+  color: #f3ea5f;
+}
+
+.electric-blue { 
+  color: #2bd1fc;
+}
+
 .about-text-1 {
   color: #2bd1fc !important
 }
+
+.plain-text { 
+  color: #fff;
+}
+
 .sub-header { 
   color: white;
 }

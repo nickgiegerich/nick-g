@@ -28,43 +28,23 @@ class App extends React.Component {
           </div>
 
           {/* NAV BAR */}
-     
           <LinkNav/>
   
-          {/* ABOUT */}
-            {/* <div id='about' className='pt-5 title-centered'>
-              <AboutTitle/>
-            </div> */}
+          {/* ABOUT */} 
+          <div id='about' className='d-flex justify-content-center pt-3'>
+            <About/>
+          </div>
           
-          <Fade cascade>
-            <div id='about' className='d-flex justify-content-center pt-3'>
-              <About/>
-            </div>
-          
-
           {/* PROJECTS */}
-          <div id='projects' className='pt-5 pb-5'>
-            <div className='title-centered'>
-              <ProjTitle/>
-            </div>
-
-            <div>
-              <Projects/>
-            </div>
+          <div id='projects' className='pt-3'>
+            <Projects/>
           </div>
 
           {/* SKILLS */}
-          
-          <div id='skills' className='pt-5 pb-5 mb-5' style={{height: '70vh'}}>
-            <div className='title-centered'>
-                <Title/>
-            </div>
-            <div>
+          <div id='skills' className='pt-3 mb-5' style={{height: '70vh'}}>
               <Skills/>
-            </div>
           </div>
           
-
           {/* RESUME */}
           <div id='contact' style={{paddingTop:'35px', paddingBottom:'65px'}}>
             <div className='title-centered'>
@@ -80,7 +60,7 @@ class App extends React.Component {
           <footer>
             <Footer/>
           </footer>
-          </Fade>
+          
         </div>
       )
     }

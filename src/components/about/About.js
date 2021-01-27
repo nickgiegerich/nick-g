@@ -6,7 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 class About extends React.Component {
   render() { 
   return (
-        <div className="row mb-4 justify-content-center" style={{width: '-webkit-fill-available'}}>
+        <div className="row justify-content-center" style={{width: '-webkit-fill-available'}}>
             <div className='col-12 '>
                 <div className='jumbotron about-me-container'>
                     <div className='about-me-content'>
@@ -48,13 +48,13 @@ class About extends React.Component {
                         <hr className="my-4"></hr>
                         <div className='row'>
                             <div className='col-12 text-center'>
-                                <AnchorLink class="btn effect04" data-sm-link-text="CLICK" target="_blank"><span>projects</span></AnchorLink>
+                                <AnchorLink class="btn effect04" data-sm-link-text="CLICK" href="#projects"><span>projects</span></AnchorLink>
                             </div>
                             <div className='col-12 text-center'>
-                                <AnchorLink class="btn effect04" data-sm-link-text="CLICK" target="_blank"><span>skills</span></AnchorLink>
+                                <AnchorLink class="btn effect04" data-sm-link-text="CLICK" href="#skills"><span>skills</span></AnchorLink>
                             </div>
                             <div className='col-12 text-center'>
-                                <AnchorLink class="btn effect04" data-sm-link-text="CLICK" target="_blank"><span>contact</span></AnchorLink>
+                                <AnchorLink class="btn effect04" data-sm-link-text="CLICK" href="#contact"><span>contact</span></AnchorLink>
                             </div>
                         </div>
                     </div>

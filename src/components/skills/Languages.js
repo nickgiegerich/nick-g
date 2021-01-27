@@ -1,11 +1,13 @@
 import React from 'react';
 import '../../App.css';
+import Title from './SkillsTitle';
 
 class Languages extends React.Component {
   render() { 
   return (
         <div className="float-container">
             <div className="all-objects">
+                <Title/>
                 <div className="speed-one dist-1">
                     <img style={{marginTop:'80vh'}} src='./langIcons/java.svg' alt='floating-icon'/>
                 </div>

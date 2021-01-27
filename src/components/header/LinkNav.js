@@ -5,25 +5,30 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 export default function Links() {
 
   return (
-<nav className="navbar navbar-dark fixed-top">
-<div className="container-fluid">
-  <div>
-    
-  </div>
-    <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<nav className="navbar sticky-top navbar-expand-lg navbar-dark my-nav-bar">
+  {/* <a class="navbar-brand" href="#">Navbar</a> */}
+  <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav shift-nav">
-            {/* Can use offset='100' to create distance on smooth scroll from top */}
-            <AnchorLink className="nav-item nav-link my-nav-item" href="/home">home</AnchorLink>
-            <AnchorLink offset='100' className="nav-item nav-link my-nav-item" href="/about">about</AnchorLink>
-            <AnchorLink offset='100' className="nav-item nav-link my-nav-item" href="/projects">projects</AnchorLink>
-            <AnchorLink className="nav-item nav-link my-nav-item" href="/skills">skills</AnchorLink>
-            <AnchorLink className="nav-item nav-link my-nav-item" href="/contact">contact</AnchorLink>
-        </div>
-    </div>
-</div>
+  </button>
+  <div className="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+    <ul className="navbar-nav">
+      <li className="nav-item">
+        <AnchorLink className="nav-link" href="#home">home<span className='pl-3'> / </span></AnchorLink>
+      </li>
+      <li className="nav-item">
+        <AnchorLink offset='75' className="nav-link" href="#about">about<span className='pl-3'> / </span></AnchorLink>
+      </li>
+      <li className="nav-item">
+        <AnchorLink offset='75' className="nav-link" href="#projects">projects<span className='pl-3'> / </span></AnchorLink>
+      </li>
+      <li className="nav-item">
+        <AnchorLink offset='75' className="nav-link" href="#skills">skills<span className='pl-3'> / </span></AnchorLink>
+      </li>
+      <li className="nav-item">
+        <AnchorLink offset='75' className="nav-link" href="#contact">contact</AnchorLink>
+      </li>
+    </ul>
+  </div>
 </nav>
   );
 }
